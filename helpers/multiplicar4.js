@@ -1,6 +1,7 @@
 const fs = require ('fs')
 var pdf = require('html-pdf');
 var _ = require('lodash');
+//para colors
 var colors = require('colors');
 ////////////PARA PDF
 let PDFDocument = require('pdfkit');
