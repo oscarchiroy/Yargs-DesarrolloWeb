@@ -4,7 +4,7 @@ const colors = require('colors')
 const argv = require('./config/yargs2')
 if(argv.b <= 10){
 console.clear();
-
+//si sucede
 console.log(argv);
 
 
