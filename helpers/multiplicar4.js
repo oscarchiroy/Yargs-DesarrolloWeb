@@ -1,7 +1,6 @@
 const fs = require ('fs')
 var pdf = require('html-pdf');
 var _ = require('lodash');
-//para colors
 var colors = require('colors');
 ////////////PARA PDF
 let PDFDocument = require('pdfkit');
@@ -62,7 +61,7 @@ const crearArchivo = async(base = 2, cantidad =0, interes=0, nombre, apellido, l
             let salida = '';
             
             for (let i =1; i <= tiempo; i++){
-                salida += `Mes ${i} = ${cuotamen}\n`;
+                salida += `Mes  ${i}        ${cuota}         ${interesmen}         ${cuotamen}\n`;
             }
     
     
@@ -113,13 +112,12 @@ const crearArchivo = async(base = 2, cantidad =0, interes=0, nombre, apellido, l
             .text(`Cantidad Desembolsado Q.${cantidad}`, 30, 150)
     
             .fontSize(10)
-            .text(`Fecha`, 50, 200)
-            .text(`Cantidad Desembolsado `, 110, 200) 
-            .text(`Capital Mensual`, 240, 200)
+            .text(`Fecha`, 110, 200)
+            .text(`Capital Mensual`, 160, 200) 
             .text(`Intereses Mensual`, 340, 200)
             .text(`Capital+Intereses`, 440, 200)
-
-            ;
+            .text(`${salida}\n`, 110, 210);
+      
             // Adding image in the pdf.
             
             // doc.image('download3.jpg', {
