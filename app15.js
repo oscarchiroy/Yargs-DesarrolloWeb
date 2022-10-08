@@ -15,5 +15,5 @@ crearArchivo(argv.b, argv.c, argv.i, argv.n, argv.a, argv.l)
 
    
 }else{
-    console.log('El limite de tiempo es de 10 años');
+    console.log('El limite de tiempo es de 10 años');;
 }
